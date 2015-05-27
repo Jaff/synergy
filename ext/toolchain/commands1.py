@@ -439,8 +439,8 @@ class InternalCommands:
 		if not macSdkMatch:
 			raise Exception("unknown osx version: " + self.macSdk)
 
-        cmake_args += " -DOSX_TARGET_MAJOR=" + macSdkMatch.group(1)
-        cmake_args += " -DOSX_TARGET_MINOR=" + macSdkMatch.group(2)
+		cmake_args += " -DOSX_TARGET_MAJOR=" + macSdkMatch.group(1)
+		cmake_args += " -DOSX_TARGET_MINOR=" + macSdkMatch.group(2)
 		
 		# if not visual studio, use parent dir
 		sourceDir = generator.getSourceDir()
